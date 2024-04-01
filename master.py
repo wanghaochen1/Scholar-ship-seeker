@@ -1,8 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
 import re
+import json
 
-def get_scholarship_info(url,name,date,keyword='奖学金'):
+def get_scholarship_info(url,name,flag,keyword='奖学金'):
     response = requests.get(url)
     response.encoding = 'utf-8'  # 设置编码
     soup = BeautifulSoup(response.text, 'html.parser')
@@ -11,45 +12,34 @@ def get_scholarship_info(url,name,date,keyword='奖学金'):
     li_elements = soup.find_all('li')
     dd_elements = soup.find_all('dd')
     # 定义日期的正则表达式
-# 定义日期的正则表达式
+    # 定义日期的正则表达式
     date_pattern = re.compile(r'\d{4}-\d{2}-\d{2}')
 
-    print(name + '奖学金信息：')
+    print('**********'+name + '奖学金信息：' + '**********')
     # 检查每个<li>元素的文本内容是否包含日期
-    if date:
+    if flag:
         for li in li_elements:
             if keyword in li.text and date_pattern.search(li.text):
-                print(li.text)
+                print('{:<50}'.format(li.text.replace('\n', '')))
     else:
         for li in li_elements:
             if keyword in li.text:
-                print(li.text)
-    if date:
+                print('{:<50}'.format(li.text.replace('\n', '')))
+
+    if flag:
         for dd in dd_elements:
             if keyword in dd.text and date_pattern.search(dd.text):
-                print(dd.text)
+                print('{:<50}'.format(dd.text.replace('\n', '')))
     else:
         for dd in dd_elements:
             if keyword in dd.text:
-                print(dd.text)
+                print('{:<50}'.format(dd.text.replace('\n', '')))
+    print('\n')
 
-# 使用你的URL
-get_scholarship_info('https://me.bit.edu.cn/rcpy/xsgztz/index.htm','机械工程学院',True)
-
-get_scholarship_info('https://sie.bit.edu.cn/tzgg/zhtz/index.htm','信息与电子学院',False)
-
-get_scholarship_info('https://smen.bit.edu.cn/tzgg/','机电学院',True)
-
-get_scholarship_info('https://sae.bit.edu.cn/tzgggb/','宇航学院',True)
-
-get_scholarship_info('https://sme.bit.edu.cn/tzgg/','材料学院',True)
-
-get_scholarship_info('https://ac.bit.edu.cn/tzgg/','自动化',True)
-
-get_scholarship_info('https://cs.bit.edu.cn/tzgg/','计算机',False)
-
-get_scholarship_info('https://arims.bit.edu.cn/tz/','前沿交叉',True)
-
-get_scholarship_info('https://opt.bit.edu.cn/tzgg2/tzgg/','光电学院',False)
+with open('website.json', 'r',encoding = 'utf-8') as f:
+    websites = json.load(f)
+# 遍历列表，对每个网站调用 get_scholarship_info 函数
+for website in websites:
+    get_scholarship_info(website['url'], website['name'], website['flag'])
 
 input("按任意键退出...")
