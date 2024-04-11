@@ -17,8 +17,8 @@ jobs:
     shell: pwsh
     run: |
       .\dist\master.exe > output.txt
-      echo "::set-output name=result::$(Get-Content output.txt)"
-
+      echo "::set-output name=result::$(Get-Content website.json -Raw)"
+      
     - name: Send mail
       uses: dawidd6/action-send-mail@v2
       with:
