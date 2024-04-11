@@ -13,10 +13,10 @@ jobs:
 
     - name: Run exe
       id: run
-      shell: pwsh
+      shell: bash
       run: |
         .\dist\master.exe > output.txt
-        $result = Get-Content output.txt -Raw
+        $result = $(cat output.txt)
         echo $result
         echo "::set-output name=result::$result"
 
@@ -31,3 +31,4 @@ jobs:
           to: uu3fusy@outlook.com
           from: wanghaochen001@outlook.com
           body: ${{ steps.run.outputs.result }}
+          content_type: text/plain
