@@ -4,7 +4,11 @@ import re
 import json
 
 def get_scholarship_info(url,name,flag,keyword='学金'):
-    response = requests.get(url)
+    try:
+        response = requests.get(url)
+    except ConnectionError:
+        print(f"无法连接到 {url}")
+        return
     response.encoding = 'utf-8'  # 设置编码
     soup = BeautifulSoup(response.text, 'html.parser')
 
