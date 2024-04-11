@@ -1,33 +1,33 @@
 name: call_me
 
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: '0 10 * * *'
+    workflow_dispatch:
+    schedule:
+      - cron: '0 10 * * *'
 jobs:
     build:
-        runs-on: windows-latest
-        steps:
-        - uses: actions/checkout@v2
-    
-        - name: Run exe
+      runs-on: windows-latest
+      steps:
+      - uses: actions/checkout@v2
+  
+      - name: Run exe
         id: run
         shell: bash
         run: |
-            ./dist/master.exe > output.txt
-            result=$(cat output.txt)
-            echo $result
-            echo "::set-output name=result::$result"
-            
-        - name: Send mail
+          ./dist/master.exe > output.txt
+          result=$(cat output.txt)
+          echo $result
+          echo "::set-output name=result::$result"
+              
+      - name: Send mail
         uses: dawidd6/action-send-mail@v2
         with:
-            server_address: smtp.gmail.com
-            server_port: 465
-            username: ${{ secrets.MAIL_USERNAME }}
-            password: ${{ secrets.MAIL_PASSWORD }}
-            subject: Test mail from GitHub Actions
-            to: uu3fusy@outlook.com
-            from: wanghaochen001@outlook.com
-            body: ${{ steps.run.outputs.result }}
-            content_type: text/plain
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: Test mail from GitHub Actions
+          to: uu3fusy@outlook.com
+          from: wanghaochen001@outlook.com
+          body: ${{ steps.run.outputs.result }}
+          content_type: text/plain
