@@ -71,7 +71,7 @@ if __name__ == "__main__":
 
     
         sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
-
+        print('奖学金信息：')
         with open('website.json', 'r',encoding = 'utf-8') as f:
             websites = json.load(f)
             # 遍历列表，对每个网站调用 get_scholarship_info 函数
