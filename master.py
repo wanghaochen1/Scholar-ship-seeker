@@ -11,6 +11,9 @@ def get_scholarship_info(url,name,flag,keyword='学金'):
     except requests.exceptions.RequestException as e:
         print(f"无法连接到 {url}: {e}")
         return
+    if response is None:
+        print(f"无法获取 {url} 的响应")
+        return
     response.encoding = 'utf-8'  # 设置编码
     soup = BeautifulSoup(response.text, 'html.parser')
 
