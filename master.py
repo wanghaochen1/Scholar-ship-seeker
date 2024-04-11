@@ -2,6 +2,8 @@ import requests
 from bs4 import BeautifulSoup 
 import re
 import json
+import sys
+import io
 
 def get_scholarship_info(url,name,flag,keyword='学金'):
     try:
@@ -58,6 +60,7 @@ def get_scholarship_info(url,name,flag,keyword='学金'):
 
 ##Main函数
 if __name__ == "__main__":
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
     with open('website.json', 'r',encoding = 'utf-8') as f:
         websites = json.load(f)
         # 遍历列表，对每个网站调用 get_scholarship_info 函数
