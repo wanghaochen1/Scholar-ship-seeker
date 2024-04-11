@@ -36,14 +36,14 @@ def get_scholarship_info(url,name,flag,keyword='学金'):
                 date = date_pattern.search(li.text).group()
                 scholarship_info[date] = {'name': name, 'info': text}
 
-        # for dd in dd_elements:
-        #     if keyword in dd.text and date_pattern.search(dd.text):
-        #         text = dd.text.replace('\n', '')
-        #         print('{:<50}'.format(text))
-        #         text = text.encode('utf-8')
+        for dd in dd_elements:
+            if keyword in dd.text and date_pattern.search(dd.text):
+                text = dd.text.replace('\n', '')
+                print('{:<50}'.format(text))
+                text = text.encode('utf-8')
 
-        #         date = date_pattern.search(dd.text).group()
-        #         scholarship_info[date] = {'name': name, 'info': text}
+                date = date_pattern.search(dd.text).group()
+                scholarship_info[date] = {'name': name, 'info': text}
     else:
         for li in li_elements:
             if keyword in li.text:
@@ -59,18 +59,27 @@ def get_scholarship_info(url,name,flag,keyword='学金'):
                 text = text.encode('utf-8')
 
                 scholarship_info['no_date'] = {'name': name, 'info': dd.text.replace('\n', '').encode('utf-8')}
-    print('\n')
-
+    print('***************************************')
 ##Main函数
 if __name__ == "__main__":
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
-    with open('website.json', 'r',encoding = 'utf-8') as f:
-        websites = json.load(f)
-        # 遍历列表，对每个网站调用 get_scholarship_info 函数
-    all_scholarships = []
-        # 遍历列表，对每个网站调用 get_scholarship_info 函数
-    for website in websites:
-        all_scholarships.append(get_scholarship_info(website['url'], website['name'], website['flag']))
+    with open('output.txt', 'w') as file:
+        # 保存原始的 stdout
+        original_stdout = sys.stdout 
 
-    with open('scholarships.json', 'w', encoding='utf-8') as f:
-        json.dump(all_scholarships, f, ensure_ascii=False)
+        # 重定向 stdout 到文件
+        sys.stdout = file
+
+    
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
+
+        with open('website.json', 'r',encoding = 'utf-8') as f:
+            websites = json.load(f)
+            # 遍历列表，对每个网站调用 get_scholarship_info 函数
+            all_scholarships = []
+                # 遍历列表，对每个网站调用 get_scholarship_info 函数
+            for website in websites:
+                all_scholarships.append(get_scholarship_info(website['url'], website['name'], website['flag']))
+        # 打开一个文件，如果文件不存在，将会创建
+
+        sys.stdout = original_stdout
+        file.close()
