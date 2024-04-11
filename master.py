@@ -36,14 +36,14 @@ def get_scholarship_info(url,name,flag,keyword='学金'):
                 date = date_pattern.search(li.text).group()
                 scholarship_info[date] = {'name': name, 'info': text}
 
-        for dd in dd_elements:
-            if keyword in dd.text and date_pattern.search(dd.text):
-                text = dd.text.replace('\n', '')
-                print('{:<50}'.format(text))
-                text = text.encode('utf-8')
+        # for dd in dd_elements:
+        #     if keyword in dd.text and date_pattern.search(dd.text):
+        #         text = dd.text.replace('\n', '')
+        #         print('{:<50}'.format(text))
+        #         text = text.encode('utf-8')
 
-                date = date_pattern.search(dd.text).group()
-                scholarship_info[date] = {'name': name, 'info': text}
+        #         date = date_pattern.search(dd.text).group()
+        #         scholarship_info[date] = {'name': name, 'info': text}
     else:
         for li in li_elements:
             if keyword in li.text:
