@@ -8,8 +8,8 @@ import io
 def get_scholarship_info(url,name,flag,keyword='学金'):
     try:
         response = requests.get(url)
-    except ConnectionError:
-        print(f"无法连接到 {url}")
+    except requests.exceptions.RequestException as e:
+        print(f"无法连接到 {url}: {e}")
         return
     response.encoding = 'utf-8'  # 设置编码
     soup = BeautifulSoup(response.text, 'html.parser')
