@@ -13,7 +13,6 @@ jobs:
 
     - name: Run exe
       id: run
-      shell: pwsh
       run: |
         .\dist\master.exe > output.txt
         $result = Get-Content output.txt -Raw
