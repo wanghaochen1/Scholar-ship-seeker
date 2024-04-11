@@ -23,6 +23,6 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: Test mail from GitHub Actions
-          to: your-email@example.com
-          from: your-email@example.com
+          to: uu3fusy@outlool.com
+          from: wanghaochen001@outlook.com
           body: ${{ steps.run.outputs.result }}
