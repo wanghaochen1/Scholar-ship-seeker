@@ -22,12 +22,12 @@ jobs:
       - name: Send mail
         uses: dawidd6/action-send-mail@v2
         with:
-          server_address: mail.bit.edu.cn
+          server_address: smtp.qq.com
           server_port: 465
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: Test mail from GitHub Actions
           to: uu3fusy@outlook.com
-          from: 1120210529@bit.edu.cn
+          from: 3401477225@qq.com
           body: ${{ steps.run.outputs.result }}
           content_type: text/plain
