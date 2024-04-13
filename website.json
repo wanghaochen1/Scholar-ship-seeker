@@ -30,12 +30,12 @@
         "flag": true
     },
     {
-        "url": "https://cs.bit.edu.cn/tzgg/",
+        "url": "https://cs.bit.edu.cn/tzgg/index.htm",
         "name": "计算机",
         "flag": false
     },
     {
-        "url": "https://arims.bit.edu.cn/tz/",
+        "url": "https://arims.bit.edu.cn/tz/index.htm",
         "name": "前沿交叉",
         "flag": true
     },
