@@ -10,6 +10,10 @@ jobs:
       steps:
       - uses: actions/checkout@v2
   
+      - name: Get date
+        id: date
+        run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+  
       - name: Run exe
         id: run
         shell: bash
@@ -19,8 +23,7 @@ jobs:
           echo "result<<EOF" >> $GITHUB_ENV  # 使用特殊的语法
           echo "$result" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
-
-              
+          
       - name: Send mail
         uses: dawidd6/action-send-mail@v2
         with:
@@ -28,8 +31,8 @@ jobs:
           server_port: 465
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
-          subject: Test mail from GitHub Actions
-          to: uu3fusy@outlook.com
+          subject: Test mail from GitHub Actions ${{ env.DATE }}
+          to: uu3fusy@outlook.com,yangjb01@163.com
           from: 3401477225@qq.com
           body: ${{ env.result }}
           content_type: text/plain
