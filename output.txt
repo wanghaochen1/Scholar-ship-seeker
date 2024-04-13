@@ -1,13 +1,61 @@
-奖学金信息：
-无法连接到 https://me.bit.edu.cn/rcpy/xsgztz/index.htm: HTTPSConnectionPool(host='me.bit.edu.cn', port=443): Max retries exceeded with url: /rcpy/xsgztz/index.htm (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002D2767F83C8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
-无法连接到 https://sie.bit.edu.cn/tzgg/zhtz/index.htm: HTTPSConnectionPool(host='sie.bit.edu.cn', port=443): Max retries exceeded with url: /tzgg/zhtz/index.htm (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002D2767F82E8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
-无法连接到 https://smen.bit.edu.cn/tzgg/: HTTPSConnectionPool(host='smen.bit.edu.cn', port=443): Max retries exceeded with url: /tzgg/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002D2767F84E0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
-无法连接到 https://sae.bit.edu.cn/tzgggb/: HTTPSConnectionPool(host='sae.bit.edu.cn', port=443): Max retries exceeded with url: /tzgggb/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002D2767F8438>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
-无法连接到 https://sme.bit.edu.cn/tzgg/: HTTPSConnectionPool(host='sme.bit.edu.cn', port=443): Max retries exceeded with url: /tzgg/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002D2767F81D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
-无法连接到 https://ac.bit.edu.cn/tzgg/: HTTPSConnectionPool(host='ac.bit.edu.cn', port=443): Max retries exceeded with url: /tzgg/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002D2767F8278>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
-无法连接到 https://cs.bit.edu.cn/tzgg/: HTTPSConnectionPool(host='cs.bit.edu.cn', port=443): Max retries exceeded with url: /tzgg/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002D2767F8390>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
-无法连接到 https://arims.bit.edu.cn/tz/: HTTPSConnectionPool(host='arims.bit.edu.cn', port=443): Max retries exceeded with url: /tz/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002D2767F8588>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
-无法连接到 https://opt.bit.edu.cn/tzgg2/tzgg/: HTTPSConnectionPool(host='opt.bit.edu.cn', port=443): Max retries exceeded with url: /tzgg2/tzgg/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002D2767F8390>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
-无法连接到 https://www.bit.edu.cn/rcpy_sjb/blsy87/jgsygb/tzggsy/: HTTPSConnectionPool(host='www.bit.edu.cn', port=443): Max retries exceeded with url: /rcpy_sjb/blsy87/jgsygb/tzggsy/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002D2767F85C0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
-无法连接到 https://xuteli.bit.edu.cn/tzgg/: HTTPSConnectionPool(host='xuteli.bit.edu.cn', port=443): Max retries exceeded with url: /tzgg/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002D2767F81D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
-无法连接到 https://www.bit.edu.cn/rcpy_sjb/bksjy_sjb/: HTTPSConnectionPool(host='www.bit.edu.cn', port=443): Max retries exceeded with url: /rcpy_sjb/bksjy_sjb/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002D2767F86A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+**********机械工程学院奖学金信息：**********
+关于对2024年徐特立奖学金推荐名单的公示2024-04-07                   
+关于做好北京理工大学2024年北方工业奖学金评选工作的通知2024-04-02           
+关于做好北京理工大学2024年徐特立奖学金评选工作的通知2024-03-21            
+关于2022-2023学年康明斯林慰梓博士奖学金评审结果公示2024-02-27          
+第十五届江麓奖学金评审通知2023-12-02                           
+关于2023年康明斯林慰梓博士奖学金评审的通知2023-11-09                 
+关于2023年开展第二批社会捐助类奖助学金（部分）评选工作的通...2023-11-03      
+***************************************
+**********信息与电子学院奖学金信息：**********
+关于评定2023年北京理工大学信息与电子学院研究生国家奖学金的通知                 
+***************************************
+**********机电学院奖学金信息：**********
+机电学院2024年徐特立奖学金推荐结果公示2024-04-03                   
+机电学院关于做好北京理工大学2024年北方工业奖学金评选工作的通知2024-04-01       
+机电学院关于做好北京理工大学2024年徐特立奖学金评选工作的通知2024-03-21        
+机电学院关于2023年度“机器人奖学金”评选推荐工作的通知2024-01-03           
+关于开展2023年火炸药未来人才成长奖学金项目的通知2023-12-06              
+兵器科学与技术学科特区办公室关于评定2023年度博士研究生学业奖学金的通知2023-11-07   
+机电学院关于2023年开展第二批社会捐助类奖助学金（部分）评选工作的通知2023-11-07    
+***************************************
+**********宇航学院奖学金信息：**********
+关于宇航学院2024年徐特立奖学金评选推荐结果的公示2024-04-07              
+关于做好北京理工大学2024年北方工业奖学金评选工作的通知2024-03-31           
+关于做好北京理工大学2024年徐特立奖学金评选工作的通知2024-03-20            
+关于评选宇航学院红箭奖学金、11791奖学金、13781奖励金、...2024-01-09     
+关于2023年开展第二批社会捐助类奖助学金（部分&...2023-11-03            
+***************************************
+**********材料学院奖学金信息：**********
+***************************************
+**********自动化奖学金信息：**********
+关于做好北京理工大学2024年北方工业奖学金评选工作的通知2024-03-29           
+关于做好北京理工大学自动化学院2024年徐特立奖学金评选工作的通知2024-03-21       
+***************************************
+**********计算机奖学金信息：**********
+2023/10/08北京理工大学计算机学院  2023年研究生学业奖学金评审细则          
+2023/09/19北京理工大学计算机学院2023年研究生国家奖学金评审细则            
+***************************************
+**********前沿交叉奖学金信息：**********
+***************************************
+**********光电学院奖学金信息：**********
+2024-04-01关于做好北京理工大学2024年北方工业奖学金评选工作的通知           
+2024-01-232022-2023学年光电奖助学金评选结果                   
+***************************************
+**********精工书院奖学金信息：**********
+(2024-03-20)				精工书院关于做好北京理工大学2024年徐特立奖学金评选工作的通知 
+(2023-11-03)				精工书院关于2023年开展新长城自强助学金评选工作的通知     
+(2023-11-03)				精工书院关于2023年开展第二批社会捐助类奖助学金（部分）评选工作...
+(2023-09-26)				精工书院关于做好2023年本科生国家奖学金、国家励志奖学金评审推荐工作的通知
+(2023-09-21)				精工书院关于做好2023年家庭经济困难学生认定和国家助学金申请工作通知
+(2023-09-20)				精工书院关于2023年社会捐助类奖助学金（部分）评选工作的通知  
+(2023-03-20)				精工书院关于做好北京理工大学2023年徐特立奖学金评选工作的通知 
+(2022-11-02)				精工书院关于2022年华瑞世纪奖学金评选的通知          
+(2022-09-21)				精工书院关于2022年社会捐助类奖助学金（部分）评选工作的通知  
+(2022-09-14)				精工书院关于做好2022年本科生国家奖学金、国家励志奖学金评审推荐工作的通知
+(2022-04-07)				关于做好北京理工大学精工书院2022年徐特立奖学金评选工作的通知 
+***************************************
+**********徐特立学院奖学金信息：**********
+***************************************
+**********睿信书院奖学金信息：**********
+***************************************
