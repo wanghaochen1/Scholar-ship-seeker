@@ -15,9 +15,11 @@ jobs:
         shell: bash
         run: |
           ./dist/master.exe > output.txt
-          result=$(cat output.txt)
-          echo $result
-          echo "::set-output name=result::$result"
+          result=$(cat output.txt)  # 使用 base64 编码
+          echo "result<<EOF" >> $GITHUB_ENV  # 使用特殊的语法
+          echo "$result" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
               
       - name: Send mail
         uses: dawidd6/action-send-mail@v2
@@ -29,5 +31,5 @@ jobs:
           subject: Test mail from GitHub Actions
           to: uu3fusy@outlook.com
           from: 3401477225@qq.com
-          body: ${{ steps.run.outputs.result }}
+          body: ${{ env.result }}
           content_type: text/plain
