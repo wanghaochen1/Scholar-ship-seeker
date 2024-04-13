@@ -3,7 +3,7 @@ name: call_me
 on:
     workflow_dispatch:
     schedule:
-      - cron: '40 8 * * *'
+      - cron: '00 2 * * *'
 jobs:
     build:
       runs-on: windows-latest
