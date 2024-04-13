@@ -29,7 +29,7 @@ def get_scholarship_info(url,name,flag,keyword='学金'):
     if flag:
         for li in li_elements:
             if keyword in li.text and date_pattern.search(li.text):
-                text = li.text.replace('\n', '')
+                text = li.text.replace('\n', '').replace(' ', '').replace('\t', '')
                 print('{:<50}'.format(text))
                 text = text.encode('utf-8')
 
@@ -38,7 +38,7 @@ def get_scholarship_info(url,name,flag,keyword='学金'):
 
         for dd in dd_elements:
             if keyword in dd.text and date_pattern.search(dd.text):
-                text = dd.text.replace('\n', '')
+                text = dd.text.replace('\n', '').replace(' ', '').replace('\t', '')
                 print('{:<50}'.format(text))
                 text = text.encode('utf-8')
 
@@ -47,14 +47,14 @@ def get_scholarship_info(url,name,flag,keyword='学金'):
     else:
         for li in li_elements:
             if keyword in li.text:
-                text = li.text.replace('\n', '')
+                text = li.text.replace('\n', '').replace(' ', '').replace('\t', '')
                 print('{:<50}'.format(text))
                 text = text.encode('utf-8')
 
                 scholarship_info['no_date'] = {'name': name, 'info': text}
         for dd in dd_elements:
             if keyword in dd.text:
-                text = dd.text.replace('\n', '')
+                text = dd.text.replace('\n', '').replace(' ', '').replace('\t', '')
                 print('{:<50}'.format(text))
                 text = text.encode('utf-8')
 
