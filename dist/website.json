@@ -5,11 +5,6 @@
         "flag": true
     },
     {
-        "url": "https://www.bit.edu.cn/rcpy_sjb/blsy87/jgsygb/tzggsy/index.htm",
-        "name": "精工书院",
-        "flag": false
-    },
-    {
         "url": "https://sie.bit.edu.cn/tzgg/zhtz/index.htm",
         "name": "信息与电子学院",
         "flag": false
@@ -47,6 +42,11 @@
     {
         "url": "https://opt.bit.edu.cn/tzgg2/tzgg/",
         "name": "光电学院",
+        "flag": false
+    },
+    {
+        "url": "https://www.bit.edu.cn/rcpy_sjb/blsy87/jgsygb/tzggsy/index.htm",
+        "name": "精工书院",
         "flag": false
     },
     {
