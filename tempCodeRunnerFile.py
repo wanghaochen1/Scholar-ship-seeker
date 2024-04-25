@@ -1,1 +1,1 @@
-scholarships
+date_pattern

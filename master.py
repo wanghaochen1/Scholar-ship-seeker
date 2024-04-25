@@ -21,11 +21,10 @@ def get_scholarship_info(url,name,flag,keyword='学金'):
     li_elements = soup.find_all('li')
     dd_elements = soup.find_all('dd')
     # 定义日期的正则表达式
-    # 定义日期的正则表达式
     date_pattern = re.compile(r'\d{4}-\d{2}-\d{2}')
 
     scholarship_info = {}
-    print('**********'+name + '奖学金信息：' + '**********')
+    print('***'+name + '奖学金信息：' + '***' + url + '***')
     if flag:
         for li in li_elements:
             if keyword in li.text and date_pattern.search(li.text):
